@@ -48,3 +48,21 @@ secrets.*.js
 containers/
 assets/img/
 utils/
+
+# Template legacy files
+.vscode/
+src/containers/
+src/utils/
+src/assets/img/
+.babelrc
+.eslintrc
+.prettierrc
+tsconfig.json
+package-lock.json
+build.zip
+
+# Template history
+# Note: Adding these won't remove them from git history
+*.old
+*.backup
+.history/
