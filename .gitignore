@@ -7,7 +7,6 @@ package-lock.json
 # Build outputs
 /build
 /dist
-/zip
 
 # Development
 .DS_Store
@@ -15,10 +14,8 @@ package-lock.json
 .vscode
 .idea
 *.log
-.history
 
 # Extension specific
-secrets.*.js
 *.pem
 *.crx
 
@@ -27,11 +24,27 @@ secrets.*.js
 *.temp
 .cache
 
-# testing
+# Testing
 /coverage
 
-# misc
+# Old boilerplate stuff we want to ignore
+/assets/img
+/containers
+/utils
+.babelrc
+.eslintrc
+.prettierrc
+build.zip
+tsconfig.json
+/zip
+secrets.*.js
+.history
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Old directories
+containers/
+assets/img/
+utils/
