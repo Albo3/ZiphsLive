@@ -1,13 +1,16 @@
 .App {
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
   height: 100%;
-  padding: 10px;
-  background-color: #282c34;
+  padding: 15px;
+  background-color: #1e1e1e;
+  overflow-y: auto;
+  font-family: 'Stratum2', sans-serif;
+  color: #fff;
 }
 
 .App-logo {
@@ -26,9 +29,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  gap: 15px;
 }
 
 .App-link {
@@ -42,4 +44,171 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.chart-container {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #4a4a4a;
+  border-radius: 0;
+  padding: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #ffd700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.error-message {
+  width: 100%;
+  padding: 10px;
+  background-color: #8b0000;
+  border: 2px solid #ff0000;
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.top-words {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #4a4a4a;
+  padding: 12px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-words h2 {
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  color: #ffd700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.top-words table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.top-words th,
+.top-words td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.top-words th {
+  font-weight: bold;
+  color: #ffd700;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.top-words tr:last-child td {
+  border-bottom: none;
+}
+
+.top-words tr:hover {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+/* CS1.6-style scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border: 2px solid #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffd700;
+}
+
+/* Loading text style */
+.loading-text {
+  color: #ffd700;
+  font-size: 16px;
+  text-transform: uppercase;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Chart customization for CS1.6 theme */
+.chart-container canvas {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #4a4a4a;
+  padding: 8px;
+}
+
+/* Column widths */
+.top-words th:first-child,
+.top-words td:first-child {
+  width: 60px;
+  color: #ffd700;
+}
+
+.top-words th:last-child,
+.top-words td:last-child {
+  width: 100px;
+  color: #ffd700;
+}
+
+/* Make the popup taller to accommodate both chart and table */
+body {
+  height: 500px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.zipf-accuracy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #4a4a4a;
+  padding: 4px 8px;
+  min-width: 60px;
+}
+
+.accuracy-value {
+  color: #ffd700;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.accuracy-label {
+  color: #ffd700;
+  font-size: 10px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Update h1 margin since it's now in a flex container */
+h1 {
+  margin: 0;
+  /* ... rest of the h1 styles ... */
 }
